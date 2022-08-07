@@ -18,18 +18,18 @@ if(a > b)
 {
     int max = a;
     int min = b;
-    Console.Write("Максимальное число = ");
+    Console.Write("Максимальным числом является число ");
     Console.WriteLine(max);
-    Console.Write("Минимальное число = ");
+    Console.Write("Минимальным числом является число ");
     Console.WriteLine(min);
 }
 else
 {
     int max = b;
     int min = a;
-    Console.Write("Максимальное число = ");
+    Console.Write("Максимальным числом является число ");
     Console.WriteLine(max);
-    Console.Write("Минимальное число = ");
+    Console.Write("Минимальным числом является число ");
     Console.WriteLine(min);
 }
 Console.WriteLine("Программа сравнила введённые вами числа. Хорошего дня! ");
