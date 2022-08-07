@@ -10,10 +10,10 @@ Console.WriteLine("Введите целое число ");
 int num = Convert.ToInt32(Console.ReadLine());
 if (num % 2 == 0)
 {
-    Console.WriteLine("Чётное число ");
+    Console.WriteLine("Это число является чётным. ");
 }
 else
 {
-    Console.WriteLine("Нечётное число ");
+    Console.WriteLine("Это число не является чётным. ");
 }
 Console.WriteLine("Хорошего дня!:) ");

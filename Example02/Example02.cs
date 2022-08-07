@@ -9,28 +9,28 @@ Console.WriteLine("Введите первое целое число ");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе целое число ");
 int b = Convert.ToInt32(Console.ReadLine());
-Console.Write("Первое число = ");
-Console.WriteLine(a);
-Console.Write("Второе число = ");
-Console.WriteLine(b);
+Console.WriteLine($"Первое число = {a}. ");
+Console.WriteLine($"Второе число = {b}. ");
 
-if(a > b) 
+if (a > b) 
 {
     int max = a;
     int min = b;
-    Console.Write("Максимальным числом является число ");
-    Console.WriteLine(max);
-    Console.Write("Минимальным числом является число ");
-    Console.WriteLine(min);
+    Console.WriteLine($"Максимальным числом является число {max}. ");
+    Console.WriteLine($"Минимальным числом является число {min}. ");    
 }
 else
 {
     int max = b;
     int min = a;
-    Console.Write("Максимальным числом является число ");
-    Console.WriteLine(max);
-    Console.Write("Минимальным числом является число ");
-    Console.WriteLine(min);
+    Console.WriteLine($"Максимальным числом является число {max}. ");
+    Console.WriteLine($"Минимальным числом является число {min}. ");    
+}
+if (a == b)
+{
+    int max = a;
+    int min = b;
+    Console.WriteLine($"{max} = {min}, поэтому эти числа равны. ");
 }
 Console.WriteLine("Я (в смысле программа) сравнила для вас введённые вами числа. ");
 Console.Write("Хорошего дня!:)");
