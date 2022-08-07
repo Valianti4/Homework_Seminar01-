@@ -8,11 +8,9 @@
 Console.WriteLine("Введите целое число  ");
 int num = Convert.ToInt32(Console.ReadLine());
 int i = 1;
-while (i <= num)
+while (i <=num)
 {
     if (num % 2 == 0)
-    {
-    Console.Write(" " + i++);
-    }
+    Console.Write(i + " ");
+    i ++;
 }
-Console.WriteLine("Хорошего дня! ");
