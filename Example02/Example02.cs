@@ -6,26 +6,31 @@
 // a = -9 b = -3 -> max = -3
 
 
-Console.WriteLine("Введите целое число ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите целое число ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-if(num1 > num2) 
+Console.WriteLine("Введите первое целое число ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе целое число ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Первое число = ");
+Console.WriteLine(a);
+Console.Write("Второе число = ");
+Console.WriteLine(b);
+
+if(a > b) 
 {
-    int max = num1;
-    int min = num2;
-    Console.Write("max = ");
+    int max = a;
+    int min = b;
+    Console.Write("Максимальное число = ");
     Console.WriteLine(max);
-    Console.Write("min = ");
+    Console.Write("Минимальное число = ");
     Console.WriteLine(min);
 }
 else
 {
-    int max = num2;
-    int min = num1;
-    Console.Write("max = ");
+    int max = b;
+    int min = a;
+    Console.Write("Максимальное число = ");
     Console.WriteLine(max);
-    Console.Write("min = ");
+    Console.Write("Минимальное число = ");
     Console.WriteLine(min);
 }
 Console.WriteLine("Программа сравнила введённые вами числа. Хорошего дня! ");
