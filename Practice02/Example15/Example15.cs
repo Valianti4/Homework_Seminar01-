@@ -4,6 +4,7 @@
 // 7 -> да
 // 1 -> нет
 
+
 Console.WriteLine("Введите целое число в диапазоне от 1 до 7. ");
 int num = Convert.ToInt32(Console.ReadLine());
 if (num >= 1 && num <= 5)
