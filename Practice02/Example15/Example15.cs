@@ -7,11 +7,13 @@
 
 Console.WriteLine("Введите целое число в диапазоне от 1 до 7. ");
 int num = Convert.ToInt32(Console.ReadLine());
+if (num < 1 || num > 7) 
+Console.WriteLine("Вы ввели неверное число. Пожалуйста, введите целое число в диапазоне от 1 до 7. ");
 if (num >= 1 && num <= 5)
 {
     Console.WriteLine("Этот день не является выходным. ");
 } 
-else
+else 
 {
     Console.WriteLine("Этот день является выходным. ");
 }
