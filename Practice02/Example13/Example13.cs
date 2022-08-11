@@ -6,6 +6,7 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
+
 Console.WriteLine("Введите целое число, чтобы вывести третью цифру этого числа. ");
 int num = Convert.ToInt32(Console.ReadLine());
 if (num >= -99 && num <= 99) 
