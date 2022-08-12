@@ -22,3 +22,24 @@ else
     Console.WriteLine("Этот день является выходным. ");
     }
 } 
+
+/* 
+int temp = num % 10; Нахождение пятой цифры.
+int res = temp % 10;
+
+int temp = num % 100; Нахождение четвёртой цифры.
+int res = temp / 10;
+
+int temp = num / 100; Нахождение третьей цифры.
+int temp2 = temp % 10; 
+
+int temp = num / 10;
+int temp2 = temp / 100; Нахождение второй цифры.
+int res = temp2 % 10;
+
+int temp = num / 100; Нахождение первой цифры.
+int res = temp / 100;
+*/
+
+
+// Console.WriteLine("Расстояние между точками равно: {0: #.##} ", res);

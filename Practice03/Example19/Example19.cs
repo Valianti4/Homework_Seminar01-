@@ -6,6 +6,7 @@
 23432 -> да 
 */
 
+
 Console.WriteLine("Введите целое пятизначное число, чтобы узнать, является ли оно палиндромом. ");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -42,22 +43,3 @@ else
 {
     Console.WriteLine("Это число не является пятизначным. Пожалуйста, введите целое пятизначное число. "); 
 }
-
-
-/* 
-int temp = num % 10; Нахождение пятой цифры.
-int res = temp % 10;
-
-int temp = num % 100; Нахождение четвёртой цифры.
-int res = temp / 10;
-
-int temp = num / 100; Нахождение третьей цифры.
-int temp2 = temp % 10; 
-
-int temp = num / 10;
-int temp2 = temp / 100; Нахождение второй цифры.
-int res = temp2 % 10;
-
-int temp = num / 100; Нахождение первой цифры.
-int res = temp / 100;
-*/
