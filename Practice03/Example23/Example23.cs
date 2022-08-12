@@ -10,7 +10,7 @@ Console.WriteLine("Чтобы увидеть все кубы числа от 1 �
 int num = Convert.ToInt32(Console.ReadLine());
 int i = 1;
 if (num < 1) Console.WriteLine("Вы ввели неверное число. Пожалуйста, введите число больше 1.");
-if (num > 1)
+if (num >= 1)
 {
    while (i <= num)
    {
