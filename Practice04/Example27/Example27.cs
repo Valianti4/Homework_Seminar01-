@@ -6,12 +6,20 @@
 */
 
 
-Console.WriteLine("Введите целое число");
+Console.WriteLine("Введите любое целое число. ");
 int num = Convert.ToInt32(Console.ReadLine());
-
-while (true)
+int i = 0; 
+if (num == 0)
 {
-    int res = num % 10;
-    num = num / 10;
-Console.WriteLine($"{res}");
+    Console.WriteLine("Сумма цифр равна 0. ");
+}
+else
+{
+    while(num < 0 || num > 0)
+    {   
+        int temp = num % 10;
+        i = i + temp;
+        num = num / 10;
+    }
+    Console.WriteLine($"Сумма цифр равна {Math.Abs(i)}. ");
 }
