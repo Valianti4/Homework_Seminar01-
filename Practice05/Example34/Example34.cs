@@ -6,6 +6,8 @@
 */
 
 
+Console.Write("Чтобы узнать количество чётных чисел в массиве, нажмите клавишу Enter. ");
+Console.ReadLine();
 int[] CreateArray(int size, int min, int max)
 {
     int[] array = new int[size];
@@ -31,6 +33,6 @@ void PrintArray(int[] array)
     Console.Write($" В массиве чётных чисел: {even}." );
 }
 
-Console.WriteLine("");
-int[] arr = CreateArray(4, 100, 999);
+Console.Write("");
+int[] arr = CreateArray(8, 100, 999);
 PrintArray(arr);
