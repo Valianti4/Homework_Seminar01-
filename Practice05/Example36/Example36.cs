@@ -35,5 +35,5 @@ void PrintArray(int[] array)
 }
 
 Console.Write("");
-int[] arr = CreateArray(4, -99, 99);
+int[] arr = CreateArray(6, -99, 99);
 PrintArray(arr);
