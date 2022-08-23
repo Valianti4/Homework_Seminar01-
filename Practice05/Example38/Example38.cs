@@ -33,10 +33,10 @@ double[] DifArray(double[] array)
     double min = array[0];
     double max = array[0];
     double res = 0;
-    for(int j = 1; j < array.Length; j++)
+    for(int i = 1; i < array.Length; i++)
         {            
-            if (array[j] < min) min = array[j];
-            if (array[j] > max) max = array[j];
+            if (array[i] < min) min = array[i];
+            if (array[i] > max) max = array[i];
             res = max - min;            
         }
         Console.Write($" Разница между максимальным и минимальным элементами массива равна {Math.Round(res, 2)}." );
