@@ -20,19 +20,28 @@ int[] CreateArray(int size, int min, int max)
 }
 
 void PrintArray(int[] array)
-{
-    int even = 0;
+{    
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     { 
         if (i < array.Length-1) Console.Write($"{array[i]}, " );
-        else Console.Write(array[i]);
-        if (array[i] % 2 == 0) even++;                               
+        else Console.Write(array[i]);                                       
     }
     Console.Write("]");
-    Console.Write($" В массиве чётных чисел: {even}." );
+    
 }
+int[] EvenArray(int[] array)
+{
+    int even = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0) even++;    
+    }
+    Console.Write($" В массиве чётных чисел: {even}." );
+    return array;
+}   
 
 Console.Write("");
 int[] arr = CreateArray(8, 100, 999);
 PrintArray(arr);
+EvenArray(arr);

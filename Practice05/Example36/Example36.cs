@@ -20,20 +20,30 @@ int[] CreateArray(int size, int min, int max)
 }
 
 void PrintArray(int[] array)
-{
-    int sum = 0;
+{    
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     { 
         if (i < array.Length-1) Console.Write($"{array[i]}, " );
-        else Console.Write(array[i]);
-        if(i % 2 != 0)
-        sum = array[i] + sum;                                           
+        else Console.Write(array[i]);                                                  
     }
     Console.Write("]");
-    Console.Write($" Сумма чисел на нечётных индексах равна {sum}." );    
+        
+}
+
+int[] SumArray(int[] array)
+{
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {        
+        if(i % 2 != 0) 
+        sum = array[i] + sum; 
+    } 
+    Console.Write($" Сумма чисел на нечётных индексах равна {sum}." );
+    return array;
 }
 
 Console.Write("");
 int[] arr = CreateArray(6, -99, 99);
 PrintArray(arr);
+SumArray(arr);

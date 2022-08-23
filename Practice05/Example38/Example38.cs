@@ -6,37 +6,44 @@
 
 Console.Write("Чтобы узнать разницу между максимальным и минимальным элементами массива, нажмите клавишу Enter. ");
 Console.ReadLine();
-int[] CreateArray(int size, int min, int max)
+double[] CreateArray(int size, int min, int max)
 {
-    int[] array = new int[size];
+    double[] array = new double[size];
     Random rnd = new Random();    
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.Next(min, max + 1);
+        array[i] = rnd.NextDouble() + rnd.Next(min, max);
     }
     return array;
 }
 
-void PrintArray(int[] array)
-{
-    int min = array[0];
-    int max = array[0];
-    int res = 0;
+void PrintArray(double[] array)
+{    
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     { 
-        if (i < array.Length-1) Console.Write($"{array[i]}, " );
-        else Console.Write(array[i]);
-        for(int j = 1; j < 6; j++)
-        {
+        if (i < array.Length-1) Console.Write($"{Math.Round(array[i], 2)}, " );
+        else Console.Write(Math.Round(array[i], 2));        
+    }
+    Console.Write("]");                                              
+}    
+
+double[] DifArray(double[] array)
+{
+    double min = array[0];
+    double max = array[0];
+    double res = 0;
+    for(int j = 1; j < array.Length; j++)
+        {            
             if (array[j] < min) min = array[j];
             if (array[j] > max) max = array[j];
-            res = max - min;
-        }                                              
-    }
-    Console.Write("]");
-    Console.Write($" Разница между максимальным и минимальным элементами массива равна {res}." );
-}
+            res = max - min;            
+        }
+        Console.Write($" Разница между максимальным и минимальным элементами массива равна {Math.Round(res, 2)}." );
+        return array;
+}   
+
 Console.Write("");
-int[] arr = CreateArray(6, -99, 99);
+double[] arr = CreateArray(5, -1, 20);
 PrintArray(arr);
+DifArray(arr);
