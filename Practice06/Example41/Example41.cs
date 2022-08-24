@@ -5,7 +5,7 @@
 */
 
 
-Console.WriteLine("Введите несколько целых чисел, а затем нажмите клавишу Enter, чтобы узнать, какие из них больше 0.");
+Console.WriteLine("Введите несколько целых чисел, а затем нажмите клавишу Enter, чтобы узнать, какие из них больше нуля.");
 int[] arr = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
 int num = 0;
 
@@ -15,6 +15,6 @@ for (int i = 0; i < arr.Length; i++)
 {
     if (arr[i] > 0) num++;
 }
-Console.WriteLine($"Количество чисел больше 0 равно {num}.");
+Console.WriteLine($"Количество чисел больше нуля равно {num}.");
 }
 PrintNumbers();
