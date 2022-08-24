@@ -9,12 +9,19 @@ Console.WriteLine("Введите несколько целых чисел, а �
 int[] arr = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
 int num = 0;
 
-void PrintNumbers()
+int[] Numbers(int[] array)
 { 
-for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > 0) num++;
+    }
+    return array;
+}
+
+void PrintNumbers()
 {
-    if (arr[i] > 0) num++;
+    Console.WriteLine($"Количество чисел больше нуля равно {num}.");
 }
-Console.WriteLine($"Количество чисел больше нуля равно {num}.");
-}
+
+Numbers(arr);
 PrintNumbers();
