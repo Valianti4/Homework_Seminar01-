@@ -5,7 +5,7 @@
 */
 
 
-Console.WriteLine("Введите несколько целых чисел, а затем нажмите клавишу Enter, чтобы узнать, какие из них больше нуля.");
+Console.WriteLine("Введите через запятую несколько целых чисел, а затем нажмите клавишу Enter, чтобы узнать, какие из них больше нуля.");
 int[] arr = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
 int num = 0;
 
