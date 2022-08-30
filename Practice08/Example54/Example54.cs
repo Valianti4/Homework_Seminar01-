@@ -12,14 +12,14 @@
 */
 
 
+Console.Write("Чтобы отсортировать двумерный массив по строкам, нажмите клавишу Enter.");
+Console.ReadLine();
 int[,] CreateMatrix (int row, int col, int min, int max) 
 {
     int[,] matrix = new int[row, col];
-    Random rnd = new Random();
-   
+    Random rnd = new Random();   
     for (int i = 0; i < matrix.GetLength(0); i++) 
     {
-        
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             matrix[i,j] = rnd.Next(min, max +1);
@@ -39,8 +39,7 @@ void PrintMatrix(int[,] matrix)
             else Console.Write($"{matrix[i, j], 1}");
         }
         Console.WriteLine("|");        
-    }
-        
+    }        
 }
 
 void SortMinElem(int[,] matrix)
