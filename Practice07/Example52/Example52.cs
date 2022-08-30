@@ -7,7 +7,8 @@
 Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 */
 
-
+Console.Write("Чтобы узнать среднее арифметическое каждого столбца двумерного массива, нажмите клавишу Enter.");
+Console.ReadLine();
 int[,] CreateMatrix (int row, int col, int min, int max) 
 {
     int[,] matrix = new int[row, col];
@@ -28,20 +29,19 @@ void PrintMatrix(int[,] matrix)
 {
     for (int i = 0; i <  matrix.GetLength(0); i++)
     {
-        Console.Write("[");
+        Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++) 
         {
-            if (j < matrix.GetLength(1) -1) Console.Write($"{matrix[i, j], 3}, ");
-            else Console.Write($"{matrix[i, j], 3} ");
+            if (j < matrix.GetLength(1) -1) Console.Write($"{matrix[i, j], 2}|");
+            else Console.Write($"{matrix[i, j], 2}");
         }
-        Console.WriteLine("]");
+        Console.WriteLine("|");
     }
         
 }
 
 void ColMeanMatrix(int[,] matrix)
 {
-    Console.Write($"Среднее арифметическое каждого столбца: ");
     double res = 0;
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
@@ -57,4 +57,5 @@ void ColMeanMatrix(int[,] matrix)
 
 int[,] array2D = CreateMatrix(5, 4, 0, 99);
 PrintMatrix(array2D);
+Console.Write($"Среднее арифметическое каждого столбца: ");
 ColMeanMatrix(array2D);
