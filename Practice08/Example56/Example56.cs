@@ -40,27 +40,31 @@ void PrintMatrix(int[,] matrix)
 
 void SumStringMatrix(int[,] matrix)
 {
-     int[] res = array[];  //массив для хранения сумм строк
-            int sum = 0;
-            for (int i = 0; i < array; i++)
-            {
-                for (int j = 0; j < array; j++)
-                {
-                    sum += matrix[i, j];   //суммируем элементы строки
-                }
-                res[i] = sum; //пишем сумму в массив
-                sum = 0; //обнуляем переменную
-            }
-
-            int min = 0;    //индекс строки с максимальной суммой
-            for (int j = 1; j < matrix.GetLength(1); j++)
-            {
-                if (res[j] < res[min])   //если есть строка с суммой больше, то пишем в max её индекс
-                    min = j;
-            }
-            Console.WriteLine("Номер строки с максимальной суммой элементов: "+min);
-      
-}   
+    int index = 0, minsum = 0;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        int sum = 0;
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            sum += matrix[i, j];
+        }
+        if (i == 0)
+        {
+            minsum = sum;
+        }
+        else if (sum <= minsum)
+        {
+            minsum = sum;
+            index = i;
+        }                
+    }
+    string line = string.Empty;
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        line += matrix[index, j];
+    }
+    Console.WriteLine($"Строка с минимальной суммой элементов: {index + 1}. ");    
+}
 
 int[,] array2D = CreateMatrix(3, 4, 0, 9);
 PrintMatrix(array2D);
