@@ -10,6 +10,8 @@
 */
 
 
+Console.Write("Чтобы построчно вывести трёхмерный массив вместе с индексами элементов, нажмите клавишу Enter.");
+Console.ReadLine();
 int[,,] CreateMatrix(int row, int col, int dep, int min, int max)
 {
     int[,,] matrix = new int[row, col, dep];
