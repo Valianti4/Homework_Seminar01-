@@ -62,7 +62,7 @@ int[,] DivMatrix(int[,] matrix1, int[,] matrix2)
 int[,] array2D = CreateMatrix(rnd.Next(2, 2), rnd.Next(2, 2), 0, 9);
 int[,] matrix = CreateMatrix(rnd.Next(2, 2), rnd.Next(2, 2), 0, 9);
 PrintMatrix(array2D);
-Console.WriteLine();
+Console.WriteLine("======");
 PrintMatrix(matrix);
 Console.WriteLine("Произведение двух матриц:" );
 PrintMatrix(DivMatrix(array2D, matrix));
