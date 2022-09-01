@@ -12,7 +12,7 @@
 */
 
 
-Console.Write("Чтобы отсортировать двумерный массив по строкам, нажмите клавишу Enter.");
+Console.Write("Чтобы отсортировать двумерный массив по убыванию в каждой строке, нажмите клавишу Enter.");
 Console.ReadLine();
 int[,] CreateMatrix (int row, int col, int min, int max) 
 {
@@ -64,5 +64,5 @@ void SortMinElem(int[,] matrix)
 int[,] array2D = CreateMatrix(3, 4, 0, 9);
 PrintMatrix(array2D);
 SortMinElem(array2D);
-Console.WriteLine("Отсортированный по строкам массив:");
+Console.WriteLine("Отсортированный массив:");
 PrintMatrix(array2D);

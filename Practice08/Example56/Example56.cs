@@ -10,6 +10,8 @@
 */
 
 
+Console.Write("Чтобы в прямоугольном двумерном массиве найти строку с наименьшей суммой элементов, нажмите клавишу Enter.");
+Console.ReadLine();
 int[,] CreateMatrix (int row, int col, int min, int max) 
 {
     int[,] matrix = new int[row, col];
